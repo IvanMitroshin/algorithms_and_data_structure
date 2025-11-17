@@ -45,11 +45,6 @@ def quicksort(arr):
 arr_10 = [random.randint(1, 1000) for _ in range(10)]
 arr_100 = [random.randint(1, 1000) for _ in range(100)]
 arr_1000 = [random.randint(1, 1000) for _ in range(1000)]
-"""
-print(f"Список из 10 элементов:",arr_10)
-print(f"Список из 100 элементов:",arr_100)
-print(f"Список из 1000 элементов:",arr_1000)
-"""
 
 time_10 = (timeit.timeit(lambda: quicksort(arr_10.copy()), number=1000))
 time_100 = (timeit.timeit(lambda: quicksort(arr_100.copy()), number=1000))
@@ -59,15 +54,6 @@ print(f"Время быстрой сортировки: 10 элементов - 
 print(f"Время быстрой сортировки: 100 элементов - ",time_100)
 print(f"Время быстрой сортировки: 1000 элементов - ",time_1000)
 
-"""
-sorted_10 = quicksort(arr_10)
-sorted_100 = quicksort(arr_100)
-sorted_1000 = quicksort(arr_1000)
-
-print(f"Сортированный список из 10 элементов:",sorted_10)
-print(f"Сортированный список из 100 элементов:",sorted_100)
-print(f"Сортированный список из 1000 элементов:",sorted_1000)
-"""
 def insertion_sort(arr):
     for i in range(1, len(arr)):
         n = arr[i]
